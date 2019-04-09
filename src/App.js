@@ -1,24 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import kitten from './kitten.jpg';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {clickCount: 0};
+    this.incrementClickCount = this.incrementClickCount.bind(this);
+  }
+
+  incrementClickCount() {
+    this.setState({clickCount:this.state.clickCount + 1})
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src={kitten} alt="logo" onClick={this.incrementClickCount}/>
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            Click the kitten for Profit!
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <p>You have clicked {this.state.clickCount} times.</p>
         </header>
       </div>
     );

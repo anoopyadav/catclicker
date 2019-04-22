@@ -16,15 +16,13 @@ class Cat extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={this.state.image} alt="logo"
-          onClick={this.incrementClickCount}/>
-          <p>
-            Click {this.state.name} for Profit!
-          </p>
-          <p>You have clicked {this.state.clickCount} times.</p>
-        </header>
+      <div className="Cat-container">
+        <img src={this.state.image} alt="logo"
+        onClick={this.incrementClickCount}/>
+        <p>
+          Click {this.state.name} for Profit!
+        </p>
+        <p>You have clicked {this.state.clickCount} times.</p>
       </div>
     );
   }

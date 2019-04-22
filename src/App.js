@@ -8,10 +8,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <Cat name='lil floof' image={kitten}/>
-          <Cat name='beeg floof' image={kitty}/>
-        </header>
+          <Cat className="Cat-container" name='lil floof' image={kitten}/>
+          <Cat className="Cat-container" name='beeg floof' image={kitty}/>
       </div>
     );
   }
